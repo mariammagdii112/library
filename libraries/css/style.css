@@ -1,0 +1,48 @@
+/*  font-family: "Jomhuria", system-ui; */
+/*   font-family: "Playwrite CU", cursive; */
+/* styles.css */
+body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+.container {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        overflow: hidden;
+}
+
+.car {
+        
+        position: absolute;
+        width: 50px; /* Adjust size as needed */
+        height: 30px;
+        margin-top: 290px;
+        font-size: 50px;
+        background-image: url('car-icon.png'); /* Replace with your car icon */
+        background-size: cover;
+        background-position: center;
+        animation: moveCar 5s linear 2;
+        color: #3924a3;
+}
+
+.text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: #333;
+        opacity: 0;
+        transition: opacity 0.9s rev;
+}
+
+@keyframes moveCar {
+        0% {
+            transform: translateX(-100px); /* Start position (off-screen) */
+        }
+        100% {
+            transform: translateX(calc(100vw + 100px)); /* End position (off-screen) */
+        }
+}
